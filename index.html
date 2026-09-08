@@ -4,124 +4,197 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Happy Birthday Himanshu ❤️</title>
+    <title>For My Babuu 💗</title>
 
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Cute font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="page">
+    <!-- ================================= -->
+    <!-- PASSWORD SCREEN -->
+    <!-- ================================= -->
 
-        <!-- Floating decorations -->
-        <div class="sparkle s1">✦</div>
-        <div class="sparkle s2">✦</div>
-        <div class="sparkle s3">✧</div>
+    <section id="passwordScreen" class="password-screen">
 
-        <div class="heart h1">♡</div>
-        <div class="heart h2">♡</div>
-        <div class="heart h3">♡</div>
+        <div class="password-card">
 
+            <div class="lock">🔐</div>
 
-        <!-- Heading -->
-        <h1>
-            <h1>Happy Birthday,</h1>
-            <span>Himanshu</span>
-        </h1>
+            <h1>Shhh... 🤫</h1>
 
-        <h2>My Babuu! 🎀</h2>
+            <p class="password-title">
+                This little surprise is only for you 💗
+            </p>
 
-        <p class="intro">
-            Make a wish and blow the candle ✨
-        </p>
+            <p class="password-hint">
+                Enter the secret password
+            </p>
 
+            <div class="input-wrapper">
+                <input
+                    type="password"
+                    id="passwordInput"
+                    placeholder="Enter password..."
+                    autocomplete="off"
+                >
 
-        <!-- Cake -->
-        <div class="cake-area">
-
-            <!-- Candle -->
-            <div class="candle-wrapper" onclick="blowCandle()">
-
-                <div id="flame" class="flame">
-                    🔥
-                </div>
-
-                <div class="candle">
-                </div>
-
+                <button id="togglePassword" class="eye-button">
+                    👀
+                </button>
             </div>
 
+            <button id="unlockButton" class="unlock-button">
+                Open My Surprise 💌
+            </button>
 
-            <!-- Cake -->
-            <div class="cake">
+            <p id="errorMessage" class="error-message"></p>
 
-                <div class="frosting">
-                    <span>•</span>
-                    <span>•</span>
-                    <span>•</span>
-                    <span>•</span>
-                    <span>•</span>
-                </div>
+            <div class="tiny-hearts">
+                ♡ ♥ ♡
+            </div>
 
-                <div class="cake-body">
+        </div>
 
-                    <div class="cake-hearts">
-                        ♡ &nbsp;&nbsp; ♡ &nbsp;&nbsp; ♡
+    </section>
+
+
+    <!-- ================================= -->
+    <!-- BIRTHDAY SURPRISE -->
+    <!-- ================================= -->
+
+    <main id="birthdayPage" class="birthday-page hidden">
+
+        <!-- Floating decorations -->
+        <div class="floating-heart heart-1">♥</div>
+        <div class="floating-heart heart-2">♡</div>
+        <div class="floating-heart heart-3">♥</div>
+        <div class="floating-heart heart-4">♡</div>
+
+        <div class="sparkle sparkle-1">✦</div>
+        <div class="sparkle sparkle-2">✧</div>
+        <div class="sparkle sparkle-3">✦</div>
+        <div class="sparkle sparkle-4">✧</div>
+
+
+        <!-- Birthday content -->
+
+        <div class="birthday-content">
+
+            <p class="small-text">
+                A little surprise for you...
+            </p>
+
+            <h1 class="birthday-title">
+                Happy Birthday
+            </h1>
+
+            <h2 class="name">
+                My Babuu! 🎀
+            </h2>
+
+            <p class="birthday-message">
+                May your day be filled with happiness,
+                laughter, love and all the beautiful
+                things you deserve. 💗
+            </p>
+
+
+            <!-- CAKE -->
+
+            <div class="cake-area">
+
+                <div class="cake-glow"></div>
+
+                <!-- Candle -->
+                <div class="candle-wrapper">
+
+                    <div id="flame" class="flame">
+                        <span></span>
+                    </div>
+
+                    <div class="candle">
+                        <div class="candle-stripe stripe-1"></div>
+                        <div class="candle-stripe stripe-2"></div>
+                        <div class="candle-stripe stripe-3"></div>
                     </div>
 
                 </div>
 
-                <div class="cake-plate"></div>
+
+                <!-- Cake -->
+                <div class="cake">
+
+                    <div class="cake-top">
+
+                        <div class="cream cream-1"></div>
+                        <div class="cream cream-2"></div>
+                        <div class="cream cream-3"></div>
+                        <div class="cream cream-4"></div>
+                        <div class="cream cream-5"></div>
+
+                        <span class="cake-heart heart-a">♥</span>
+                        <span class="cake-heart heart-b">♡</span>
+                        <span class="cake-heart heart-c">♥</span>
+
+                    </div>
+
+                    <div class="cake-body">
+
+                        <div class="cake-drip drip-1"></div>
+                        <div class="cake-drip drip-2"></div>
+                        <div class="cake-drip drip-3"></div>
+                        <div class="cake-drip drip-4"></div>
+
+                        <span class="cake-decoration deco-1">♡</span>
+                        <span class="cake-decoration deco-2">♥</span>
+                        <span class="cake-decoration deco-3">♡</span>
+
+                    </div>
+
+                    <div class="cake-plate"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Candle instruction -->
+
+            <p id="candleInstruction" class="candle-instruction">
+                Make a wish & tap the candle 🕯️
+            </p>
+
+            <p id="wishMessage" class="wish-message hidden">
+                Wish granted! ✨💗
+            </p>
+
+
+            <!-- Final message -->
+
+            <div class="final-message">
+
+                <p>
+                    Here's to another beautiful year
+                </p>
+
+                <p class="love-text">
+                    Stay happy, stay smiling, Babuu 💕
+                </p>
+
+                <div class="heart-line">
+                    ♡ ♥ ♡ ♥ ♡
+                </div>
 
             </div>
 
         </div>
 
-
-        <!-- Instruction -->
-        <p id="instruction">
-            👆 Tap the candle
-        </p>
-
-
-        <!-- Final Wish -->
-        <div id="wish" class="wish hidden">
-
-            <div class="party">
-                🎉 ✨ 🎈 ✨ 🎉
-            </div>
-
-            <h3>
-                Wish Made! 💗
-            </h3>
-
-            <p>
-                May your dreams be big,<br>
-                your days be bright,<br>
-                and your life be filled with<br>
-                all the happiness you deserve. 🌷
-            </p>
-
-            <div class="divider">
-                ♡
-            </div>
-
-            <strong>
-                Keep being the amazing you! ❤️
-            </strong>
-
-            <p class="love">
-                Lots of love ♡
-            </p>
-
-        </div>
-
-    </div>
+    </main>
 
 
     <script src="script.js"></script>
